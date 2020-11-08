@@ -4,15 +4,65 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/black"
     tools:context=".MainActivity">
 
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/speed_records_recycler_view"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
+        app:layout_constraintBottom_toTopOf="@+id/add_record_button"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/over_limit_text_view"
+        app:layout_constraintVertical_bias="0.396" />
+
+    <Button
+        android:id="@+id/add_record_button"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="ADD RECORD"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent" />
+
     <TextView
+        android:id="@+id/name_speed_record_text_view"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginTop="32dp"
+        android:text="SPEED RECORDS"
+        android:textColor="@color/white"
+        android:textSize="30sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
+    <TextView
+        android:id="@+id/total_text_view"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_marginTop="16dp"
+        android:text="TOTAL : 0"
+        android:textColor="#CDDC39"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="@+id/name_speed_record_text_view"
+        app:layout_constraintStart_toStartOf="@+id/name_speed_record_text_view"
+        app:layout_constraintTop_toBottomOf="@+id/name_speed_record_text_view" />
+
+    <TextView
+        android:id="@+id/over_limit_text_view"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_marginTop="8dp"
+        android:text="OVER LIMIT : 0"
+        android:textColor="#F44336"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="@+id/total_text_view"
+        app:layout_constraintStart_toStartOf="@+id/total_text_view"
+        app:layout_constraintTop_toBottomOf="@+id/total_text_view" />
 </androidx.constraintlayout.widget.ConstraintLayout>
